@@ -1,6 +1,10 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../iron-list/iron-list.html">
+<link rel="import" href="../iron-label/iron-label.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../ft-connection-list-item/ft-connection-list-item.html">
 
 <!--
 `ft-connection-list`
@@ -15,9 +19,22 @@ An element that displays a list of FileThis connection resources
 
     <template>
 
-        <div>
-            ft-connection-list
-        </div>
+        <!-- List -->
+        <iron-list selection-enabled
+                   id="connectionList"
+                   items="[[connections]]"
+                   selected-item="{{selectedConnection}}"
+                   as="connection"
+                   style="width:500px; padding-left:15px; padding-right:15px">
+
+            <!-- Connection item template -->
+            <template>
+                <ft-connection-list-item
+                        connection="[[connection]]"
+                        selected$="[[selected]]">
+                </ft-connection-list-item>
+            </template>
+        </iron-list>
 
     </template>
 
@@ -27,6 +44,24 @@ An element that displays a list of FileThis connection resources
             is: 'ft-connection-list',
 
             properties: {
+                connections:
+                {
+                    type: Array,
+                    notify: true,
+                    value: [],
+                    observer: "onConnectionsChanged"
+                },
+                selectedConnection:
+                {
+                    type: Object,
+                    notify: true,
+                    value: null
+                }
+            },
+
+            onConnectionsChanged: function()
+            {
+                this.$.connectionList.fire('resize')
             }
 
         });

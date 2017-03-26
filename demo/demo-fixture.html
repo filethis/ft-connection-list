@@ -18,7 +18,9 @@ An element that displays a list of FileThis connection resources
 
     <template>
 
-        <ft-connection-list id="panel"></ft-connection-list>
+        <div class="layout vertical center">
+            <ft-connection-list id="list"></ft-connection-list>
+        </div>
 
     </template>
 
@@ -30,9 +32,33 @@ An element that displays a list of FileThis connection resources
 
             properties:
             {
+            },
+
+            ready: function()
+            {
+                this._loadFakeConnections();
+            },
+
+            _loadFakeConnections: function()
+            {
+                var path = "fake-connections.json";
+
+                var xmlHttpRequest = new XMLHttpRequest();
+                xmlHttpRequest.overrideMimeType("application/json");
+                xmlHttpRequest.open('GET', path, true);
+                xmlHttpRequest.onreadystatechange = function()
+                {
+                    if (xmlHttpRequest.readyState == 4 &&
+                        xmlHttpRequest.status == "200")
+                    {
+                        list.connections = JSON.parse(xmlHttpRequest.responseText);
+                    }
+                };
+                xmlHttpRequest.send();
             }
 
         });
+
 
     </script>
 
