@@ -45,13 +45,17 @@ An element that displays a list of FileThis connection resources
             is: 'ft-connection-list',
 
             properties: {
+
+                /** The list of connection resources to be displayed in the list. */
                 connections:
                 {
                     type: Array,
                     notify: true,
                     value: [],
-                    observer: "onConnectionsChanged"
+                    observer: "_onConnectionsChanged"
                 },
+
+                /** The currently selected connection. */
                 selectedConnection:
                 {
                     type: Object,
@@ -60,7 +64,7 @@ An element that displays a list of FileThis connection resources
                 }
             },
 
-            onConnectionsChanged: function()
+            _onConnectionsChanged: function()
             {
                 this.$.connectionList.fire('resize')
             }
