@@ -1,6 +1,6 @@
 {
     "name": "ft-connection-list",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "An element that displays a list of FileThis connection resources",
     "main": "ft-connection-list.html",
     "dependencies": {
