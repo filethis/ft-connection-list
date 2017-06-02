@@ -67,8 +67,8 @@ An element that displays a list of FileThis connection resources
                 xmlHttpRequest.open('GET', path, true);
                 xmlHttpRequest.onreadystatechange = function()
                 {
-                    if (xmlHttpRequest.readyState == 4 &&
-                        xmlHttpRequest.status == "200")
+                    if (xmlHttpRequest.readyState === 4 &&
+                        xmlHttpRequest.status === 200)
                     {
                         list.connections = JSON.parse(xmlHttpRequest.responseText);
                     }

@@ -42,7 +42,7 @@ An element that displays a list of FileThis connection resources
                    items="[[connections]]"
                    selected-item="{{selectedConnection}}"
                    as="connection"
-                   style="width:500px;">
+                   style="width:515px;">
 
             <!-- Connection item template -->
             <template>
@@ -68,8 +68,7 @@ An element that displays a list of FileThis connection resources
                 {
                     type: Array,
                     notify: true,
-                    value: [],
-                    observer: "_onConnectionsChanged"
+                    value: []
                 },
 
                 /** The currently selected connection. */
@@ -81,8 +80,14 @@ An element that displays a list of FileThis connection resources
                 }
             },
 
-            _onConnectionsChanged: function()
+            observers:[
+                '_onConnectionsChanged(connections.splices)'
+            ],
+
+            _onConnectionsChanged: function(changeRecord)
             {
+                if (!changeRecord)
+                    return;
                 this.$.connectionList.fire('resize')
             }
 
