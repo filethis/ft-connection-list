@@ -36,6 +36,12 @@ An element that displays a list of FileThis connection resources
 
     <template>
 
+        <style>
+            :host {
+                display:block;
+            }
+        </style>
+
         <div class="layout vertical center" style="height:293px">
             <ft-connection-list id="list"
                                 style="overflow:hidden; overflow-y:scroll; border:1px solid #DDD;">
