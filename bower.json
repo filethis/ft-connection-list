@@ -6,7 +6,7 @@
     "polymer": "Polymer/polymer#^2.0.1",
     "iron-list": "PolymerElements/iron-list#^2.0.0",
     "iron-label": "PolymerElements/iron-label#^2.0.0",
-    "ft-connection-list-item": "filethis/ft-connection-list-item#^0.0.8",
+    "ft-connection-list-item": "filethis/ft-connection-list-item#^0.0.9",
     "paper-spinner": "PolymerElements/paper-spinner#^2.0.0"
   },
   "devDependencies": {
