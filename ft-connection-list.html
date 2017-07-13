@@ -46,13 +46,12 @@ An element that displays a list of FileThis connection resources
                    id="connectionList"
                    items="[[connections]]"
                    selected-item="{{selectedConnection}}"
-                   as="connection"
-                   style="width:432px; ">
+                   as="connection">
 
             <!-- Connection item template -->
             <template>
                 <ft-connection-list-item
-                        style="border-bottom:1px solid #DDD;"
+                        style="border-bottom:1px solid #DDD; "
                         connection="[[connection]]"
                         selected$="[[selected]]">
                 </ft-connection-list-item>
