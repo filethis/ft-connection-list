@@ -3,7 +3,7 @@
   "description": "An element that displays a list of FileThis connection resources",
   "main": "ft-connection-list.html",
   "dependencies": {
-    "ft-connection-list-item": "filethis/ft-connection-list-item#^0.0.17",
+    "ft-connection-list-item": "filethis/ft-connection-list-item#^0.0.18",
     "iron-label": "PolymerElements/iron-label#1 - 2",
     "iron-list": "PolymerElements/iron-list#1 - 2",
     "paper-spinner": "PolymerElements/paper-spinner#1 - 2",
