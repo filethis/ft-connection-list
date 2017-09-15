@@ -38,6 +38,7 @@ This element displays a list of FileThis connection resources.
         <style>
             :host {
                 display:block;
+                @apply --layout-vertical;
             }
         </style>
 
@@ -65,6 +66,10 @@ This element displays a list of FileThis connection resources.
 
             is: 'ft-connection-list',
 
+            behaviors: [
+                Polymer.IronResizableBehavior
+            ],
+
             properties: {
 
                 /** The list of connection resources to be displayed in the list. */
@@ -82,17 +87,6 @@ This element displays a list of FileThis connection resources.
                     notify: true,
                     value: null
                 }
-            },
-
-            observers:[
-                '_onConnectionsChanged(connections.splices)'
-            ],
-
-            _onConnectionsChanged: function(changeRecord)
-            {
-                if (!changeRecord)
-                    return;
-                this.$.connectionList.fire('resize')
             }
 
         });
