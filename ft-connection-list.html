@@ -38,15 +38,15 @@ This element displays a list of FileThis connection resources.
         <style>
             :host {
                 display:block;
-                width:100%;
-                height:100%;
+                @apply --layout-vertical;
             }
         </style>
 
         <!-- List -->
         <iron-list selection-enabled
                    id="connectionList"
-                   style="width:100%; height:100%; "
+                   class="flex"
+                   style="background-color:dodgerblue; "
                    items="[[connections]]"
                    selected-item="{{selectedConnection}}"
                    as="connection">
@@ -67,10 +67,6 @@ This element displays a list of FileThis connection resources.
         Polymer({
 
             is: 'ft-connection-list',
-
-            behaviors: [
-                Polymer.IronResizableBehavior
-            ],
 
             properties: {
 
