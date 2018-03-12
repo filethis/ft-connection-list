@@ -37,17 +37,20 @@ This element displays a list of FileThis connection resources.
 
         <style>
             :host {
-                display:block;
-                overflow:hidden;
+                display: block;
+                overflow: hidden;
                 @apply --layout-vertical;
                 @apply --ft-connection-list;
+            }
+            .list {
+                @apply --ft-connection-list-list;
             }
         </style>
 
         <!-- List -->
         <iron-list selection-enabled
                    id="connectionList"
-                   class="flex"
+                   class="list flex"
                    items="[[connections]]"
                    selected-item="{{selectedConnection}}"
                    as="connection">
