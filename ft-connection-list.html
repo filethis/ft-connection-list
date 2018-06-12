@@ -42,7 +42,7 @@ This element displays a list of FileThis connection resources.
                 @apply --layout-vertical;
                 @apply --ft-connection-list;
             }
-            .list {
+            #connectionList {
                 @apply --ft-connection-list-list;
             }
         </style>
@@ -50,7 +50,7 @@ This element displays a list of FileThis connection resources.
         <!-- List -->
         <iron-list selection-enabled
                    id="connectionList"
-                   class="list flex"
+                   class="flex"
                    items="[[connections]]"
                    selected-item="{{selectedConnection}}"
                    as="connection">
