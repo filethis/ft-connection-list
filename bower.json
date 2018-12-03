@@ -3,8 +3,8 @@
   "description": "An element that displays a list of FileThis connection resources",
   "main": "ft-connection-list.html",
   "dependencies": {
-    "ft-connection-list-item": "filethis/ft-connection-list-item#^1.0.30",
-    "ft-element-demo": "filethis/ft-element-demo#^1.0.14",
+    "ft-connection-list-item": "filethis/ft-connection-list-item#^1.0.31",
+    "ft-element-demo": "filethis/ft-element-demo#^1.0.15",
     "iron-label": "PolymerElements/iron-label#2.1.0",
     "iron-list": "PolymerElements/iron-list#2.0.19",
     "paper-spinner": "PolymerElements/paper-spinner#2.1.0",
