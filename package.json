@@ -12,14 +12,17 @@
   "dependencies": {
     "@polymer/iron-label": "^3.0.0",
     "@polymer/iron-list": "^3.0.0",
+    "@polymer/paper-button": "^3.0.0",
     "@polymer/paper-spinner": "^3.0.0",
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "ft-connection-list-item": "file:.yalc/ft-connection-list-item",
+    "ft-element-demo": "file:.yalc/ft-element-demo"
   },
   "devDependencies": {
     "@polymer/iron-component-page": "^4.0.0",
     "@polymer/iron-demo-helpers": "^3.0.0",
     "@polymer/iron-test-helpers": "^3.0.0",
-    "wct-browser-legacy": "^1.0.1",
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.1"
   }
 }

@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "packages": {
+    "ft-connection-list-item": {
+      "signature": "7809b66fcb90656a5dd15585b6dfeb07",
+      "file": true
+    },
+    "ft-element-demo": {
+      "signature": "b246107b96990bfddd35a67af1d387b5",
+      "file": true
+    }
+  }
+}
